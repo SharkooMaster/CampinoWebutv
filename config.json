@@ -23,6 +23,7 @@
 		"hamIcon": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hamburger_icon.svg/2048px-Hamburger_icon.svg.png",
 		"arrowDown": "GFX/down-arrow.svg",
 		"imgCardLg": "https://campinosoderkoping.com/wp-content/uploads/2022/07/pizza-pizzeria-background-4952508.jpg",
+		"imgCardSm": "https://img.hellofresh.com/f_auto,fl_lossy,q_auto,w_1200/hellofresh_s3/image/HF201019_R05_W50_SE_V12343751-2_KB_Main_low-72a4f120.jpg",
 		"c1": "#FF9B23"
 	},
 	"autoRefresh": {

@@ -1,9 +1,9 @@
 
 <div class="w-full flex justify-between items-center h-[90px] px-[20px] md:hidden ">
-	<img src="{logo}" />
-	<img src="{arrowDown}" class="w-[30px]" onclick="setIsNav()" />
+	<img src="{logo}" class="animate__animated animate__fadeInUp"/>
+	<img src="{arrowDown}" class="w-[30px] animate__animated animate__fadeInUp" onclick="setIsNav()" />
 	<? Popup trigger=setIsNav() ?>
-		<div class="w-full h-full flex flex-col items-center justify-center text-[{c1}] gap-6">
+		<div class="w-full h-full flex flex-col items-center justify-center text-[{c1}] gap-6 z-30">
 			<p onclick="alert(0)" class="text-xl">Home</p>
 			<p onclick="alert(1)" class="text-xl">Menu</p>
 			<p onclick="alert(2)" class="text-xl">Contact</p>

@@ -21,17 +21,17 @@
      Contact
     </p>
    </div>
-   <div class="border-[2px] w-[170px] h-[40px] rounded-full flex items-center justify-center text-center animate__animated animate__fadeInLeft" style="border-color: #FF9B23">
+   <div class="border-[2px] border-[#FF9B23] w-[170px] h-[40px] rounded-full flex items-center justify-center text-center animate__animated animate__fadeInLeft cursor-pointer" onclick="{trigger}">
     <p style="color: #FF9B23">
      0121-13140
     </p>
    </div>
   </div>
   <div class="w-full flex justify-between items-center h-[90px] px-[20px] md:hidden">
-   <img src="GFX/Logo.svg"/>
-   <img class="w-[30px]" onclick="setIsNav()" src="GFX/down-arrow.svg"/>
-   <div class="absolute left-0 w-full top-0 bottom-0 animate__animated animate__fadeInUp z-5" id="isNav" onclick="setIsNav()" style="display: none;">
-    <div class="w-full h-full flex flex-col items-center justify-center text-[#FF9B23] gap-6">
+   <img class="animate__animated animate__fadeInUp" src="GFX/Logo.svg"/>
+   <img class="w-[30px] animate__animated animate__fadeInUp" onclick="setIsNav()" src="GFX/down-arrow.svg"/>
+   <div class="absolute left-0 w-full top-0 bottom-0 bg-[#FFFFFF60] animate__animated animate__fadeInUp z-20 backdrop-blur-sm" id="isNav" onclick="setIsNav()" style="display: none;">
+    <div class="w-full h-full flex flex-col items-center justify-center text-[#FF9B23] gap-6 z-30">
      <p class="text-xl" onclick="alert(0)">
       Home
      </p>
@@ -44,24 +44,40 @@
     </div>
    </div>
    <!--
-<div class="absolute left-0 w-full top-0 bottom-0 animate__animated animate__fadeInUp z-5" style="display: none;" onclick="{trigger}" id="isNav">-->
+<div class="absolute left-0 w-full top-0 bottom-0 bg-[#FFFFFF60] animate__animated animate__fadeInUp z-20 backdrop-blur-sm" 
+	style="display: none;" onclick="{trigger}" id="isNav">-->
   </div>
-  <div class="w-full flex items-center justify-center mt-8">
-   <div class="w-[1150px] h-[260px] rounded-[40px] bg-cover bg-center flex flex-col px-[65px] py-2 justify-center justify-evenly" style="background-image: url('https://campinosoderkoping.com/wp-content/uploads/2022/07/pizza-pizzeria-background-4952508.jpg');">
+  <div class="w-full flex flex-col items-center justify-center mt-8">
+   <div class="md:w-[60%] sm:w-[85%] w-[90%] h-[260px] mx-4 rounded-[40px] bg-cover bg-center flex flex-col sm:px-[65px] px-[40px] py-2 justify-center justify-evenly" style="background-image: url('https://campinosoderkoping.com/wp-content/uploads/2022/07/pizza-pizzeria-background-4952508.jpg');">
     <p class="text-white text-[36px]">
      Sveriges Godaste Pizza
     </p>
     <div class="flex gap-6">
-     <div class="w-[170px] h-[40px] bg-[#FFFFFF] rounded-full flex items-center justify-center text-center animate__animated {class}">
+     <div class="w-[170px] h-[40px] bg-[#FFFFFF] rounded-full flex items-center justify-center text-center animate__animated {class} cursor-pointer" onclick="{trigger}">
       <p class="text-[16px] font-light" style="color: #000000">
-       Address  &gt;
+       Address
       </p>
      </div>
-     <div class="border-[2px] w-[170px] h-[40px] rounded-full flex items-center justify-center text-center animate__animated {class}" style="border-color: #FFFFFF">
+     <div class="border-[2px] border-[#FFFFFF] w-[170px] h-[40px] rounded-full flex items-center justify-center text-center animate__animated {class} cursor-pointer" onclick="{trigger}">
       <p style="color: #FFFFFF">
-       Meny  &gt;
+       Meny
       </p>
      </div>
+    </div>
+   </div>
+   <div class="md:w-[60%] sm:w-[85%] w-[90%] flex flex-row justify-between mt-24">
+    <div class="absolute sm:relative flex flex-col sm:h-full sm:pt-12 sm:ml-0 ml-2 bg-[#FFFFFFCC] sm:px-0 px-4 rounded-lg self-center z-10 backdrop-blur-sm">
+     <p class="text-[#FF9B23] text-[35px] font-light">
+      MIXA DIN EGENSALLAD!
+     </p>
+     <p class="text-[20px] text-[#1D1D1D] ml-6 font-light">
+      Välj 5 valfria ingrediense i vår fräscha salladsbar!
+     </p>
+     <p class="text-[20px] text-[#1D1D1D] ml-6 font-light">
+      (Sallad, tomat, gurka ingår)
+     </p>
+    </div>
+    <div class="w-[40px] sm:w-[400px] h-[300px] bg-cover bg-center rounded-bl-[150px]" style="background-image: url('https://img.hellofresh.com/f_auto,fl_lossy,q_auto,w_1200/hellofresh_s3/image/HF201019_R05_W50_SE_V12343751-2_KB_Main_low-72a4f120.jpg');">
     </div>
    </div>
   </div>
