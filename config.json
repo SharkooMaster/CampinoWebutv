@@ -1,0 +1,31 @@
+{
+	"localhost": "localhost",
+	"port": 8000,
+	"buildPath": "./build",
+	"root": "index.html",
+	"html": [
+		"./src",
+		"./src/Components"
+	],
+	"cssPath":
+	[
+		"./src/Css"
+	],
+	"jsPath":
+	[
+		"./src/Js"
+	],
+	"pages": [
+		"./src/index.html"
+	],
+	"vars": {
+		"logo": "GFX/Logo.svg",
+		"hamIcon": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hamburger_icon.svg/2048px-Hamburger_icon.svg.png",
+		"arrowDown": "GFX/down-arrow.svg",
+		"imgCardLg": "https://campinosoderkoping.com/wp-content/uploads/2022/07/pizza-pizzeria-background-4952508.jpg",
+		"c1": "#FF9B23"
+	},
+	"autoRefresh": {
+		"ignore" : ["./build", "./.git", ".py", ".json", "./LICENSE"]
+	}
+}
