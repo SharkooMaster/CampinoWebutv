@@ -1,7 +1,7 @@
 {
 	"localhost": "localhost",
 	"port": 8000,
-	"buildPath": "./build",
+	"buildPath": "./docs",
 	"root": "index.html",
 	"html": [
 		"./src",
@@ -27,6 +27,6 @@
 		"c1": "#FF9B23"
 	},
 	"autoRefresh": {
-		"ignore" : ["./build", "./.git", ".py", ".json", "./LICENSE"]
+		"ignore" : ["./docs", "./.git", ".py", ".json", "./LICENSE"]
 	}
 }
