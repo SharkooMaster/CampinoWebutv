@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet"/>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <script src="./index.js">
+  </script>
+ </head>
+ <body>
+  <div class="w-full justify-between items-center h-[90px] xl:px-[250px] lg:px-[140px] md:px-[80px] md:flex hidden">
+   <img class="animate__animated animate__fadeInLeft" src="GFX/Logo.svg"/>
+   <div class="flex gap-[42px]" style="color: #FF9B23">
+    <a class="animate__animated animate__fadeInLeft" href="index.html">
+     Home
+    </a>
+    <a class="animate__animated animate__fadeInLeft" href="menu.html">
+     Menu
+    </a>
+    <a class="animate__animated animate__fadeInLeft" href="contact.html">
+     Contact
+    </a>
+   </div>
+   <div class="border-[2px] border-[#FF9B23] w-[170px] h-[40px] rounded-full flex items-center justify-center text-center animate__animated animate__fadeInLeft cursor-pointer" onclick="{trigger}">
+    <p style="color: #FF9B23">
+     0121-13140
+    </p>
+   </div>
+  </div>
+  <div class="w-full flex justify-between items-center h-[90px] px-[20px] md:hidden">
+   <img class="animate__animated animate__fadeInUp" src="GFX/Logo.svg"/>
+   <img class="w-[30px] animate__animated animate__fadeInUp" onclick="setIsNav()" src="GFX/down-arrow.svg"/>
+   <div class="absolute left-0 w-full top-0 bottom-0 bg-[#FFFFFF60] animate__animated animate__fadeInUp z-20 backdrop-blur-sm" id="isNav" onclick="setIsNav()" style="display: none;">
+    <div class="w-full h-full flex flex-col items-center justify-center text-[#FF9B23] gap-6 z-30">
+     <a class="text-xl" href="index.html">
+      Home
+     </a>
+     <a class="text-xl" href="menu.html">
+      Menu
+     </a>
+     <a class="text-xl" href="contact.html">
+      Contact
+     </a>
+    </div>
+   </div>
+   <!--
+<div class="absolute left-0 w-full top-0 bottom-0 bg-[#FFFFFF60] animate__animated animate__fadeInUp z-20 backdrop-blur-sm" 
+	style="display: none;" onclick="{trigger}" id="isNav">-->
+  </div>
+  <p class="animate__animated animate__fadeInUp text-4xl mx-2 md:ml-24 text-[#FF9B23] sm:mt-8 md:text-left text-center">
+   ORDINARIA PIZZOR
+  </p>
+  <p class="animate__animated animate__fadeInUp text-2xl mx-2 mb-4 md:ml-32 text-[#FF9B23] sm:mb-8 md:text-left text-center">
+   I alla pizzor ingår Tomatsås &amp; Ost &amp; Pizzasallad
+  </p>
+  <div class="flex flex-row flex-wrap gap-12 items-center justify-center">
+   <div class="w-[240px] h-[300px] bg-white shadow-md rounded-b-[20px] flex flex-col animate__animated animate__fadeInUp">
+    <div class="w-full h-[170px] bg-cover bg-center" style="background-image: url('https://res.cloudinary.com/anora/image/upload/t_OgImage-MD-MD,f_auto/folkofolk%2Fgourmetpizza');">
+    </div>
+    <div class="flex flex-col justify-between h-[130px] p-2 pb-4">
+     <p class="text-[20px] text-[#FF9B23]">
+      Margarita
+     </p>
+     <p class="text-[18px] text-[#FF9B23] pl-2 flex-wrap pr-2 flex">
+      Tomatsås,ost
+     </p>
+     <p class="text-[20px] text-[#FF9B23] self-end">
+      99 kr
+     </p>
+    </div>
+   </div>
+   <div class="w-[240px] h-[300px] bg-white shadow-md rounded-b-[20px] flex flex-col animate__animated animate__fadeInUp">
+    <div class="w-full h-[170px] bg-cover bg-center" style="background-image: url('https://res.cloudinary.com/anora/image/upload/t_OgImage-MD-MD,f_auto/folkofolk%2Fgourmetpizza');">
+    </div>
+    <div class="flex flex-col justify-between h-[130px] p-2 pb-4">
+     <p class="text-[20px] text-[#FF9B23]">
+      Funghi
+     </p>
+     <p class="text-[18px] text-[#FF9B23] pl-2 flex-wrap pr-2 flex">
+      Champinjoner
+     </p>
+     <p class="text-[20px] text-[#FF9B23] self-end">
+      99 kr
+     </p>
+    </div>
+   </div>
+   <div class="w-[240px] h-[300px] bg-white shadow-md rounded-b-[20px] flex flex-col animate__animated animate__fadeInUp">
+    <div class="w-full h-[170px] bg-cover bg-center" style="background-image: url('https://res.cloudinary.com/anora/image/upload/t_OgImage-MD-MD,f_auto/folkofolk%2Fgourmetpizza');">
+    </div>
+    <div class="flex flex-col justify-between h-[130px] p-2 pb-4">
+     <p class="text-[20px] text-[#FF9B23]">
+      Vesuvio
+     </p>
+     <p class="text-[18px] text-[#FF9B23] pl-2 flex-wrap pr-2 flex">
+      Skinka
+     </p>
+     <p class="text-[20px] text-[#FF9B23] self-end">
+      99 kr
+     </p>
+    </div>
+   </div>
+   <div class="w-[240px] h-[300px] bg-white shadow-md rounded-b-[20px] flex flex-col animate__animated animate__fadeInUp">
+    <div class="w-full h-[170px] bg-cover bg-center" style="background-image: url('https://res.cloudinary.com/anora/image/upload/t_OgImage-MD-MD,f_auto/folkofolk%2Fgourmetpizza');">
+    </div>
+    <div class="flex flex-col justify-between h-[130px] p-2 pb-4">
+     <p class="text-[20px] text-[#FF9B23]">
+      Bussola
+     </p>
+     <p class="text-[18px] text-[#FF9B23] pl-2 flex-wrap pr-2 flex">
+      Skinka,räkor
+     </p>
+     <p class="text-[20px] text-[#FF9B23] self-end">
+      99 kr
+     </p>
+    </div>
+   </div>
+   <div class="w-[240px] h-[300px] bg-white shadow-md rounded-b-[20px] flex flex-col animate__animated animate__fadeInUp">
+    <div class="w-full h-[170px] bg-cover bg-center" style="background-image: url('https://res.cloudinary.com/anora/image/upload/t_OgImage-MD-MD,f_auto/folkofolk%2Fgourmetpizza');">
+    </div>
+    <div class="flex flex-col justify-between h-[130px] p-2 pb-4">
+     <p class="text-[20px] text-[#FF9B23]">
+      CAPRICCIOSA
+     </p>
+     <p class="text-[18px] text-[#FF9B23] pl-2 flex-wrap pr-2 flex">
+      Skinka,champinjoner
+     </p>
+     <p class="text-[20px] text-[#FF9B23] self-end">
+      99 kr
+     </p>
+    </div>
+   </div>
+   <div class="w-[240px] h-[300px] bg-white shadow-md rounded-b-[20px] flex flex-col animate__animated animate__fadeInUp">
+    <div class="w-full h-[170px] bg-cover bg-center" style="background-image: url('https://res.cloudinary.com/anora/image/upload/t_OgImage-MD-MD,f_auto/folkofolk%2Fgourmetpizza');">
+    </div>
+    <div class="flex flex-col justify-between h-[130px] p-2 pb-4">
+     <p class="text-[20px] text-[#FF9B23]">
+      Nobel
+     </p>
+     <p class="text-[18px] text-[#FF9B23] pl-2 flex-wrap pr-2 flex">
+      Skinka,champinjoner,räkor
+     </p>
+     <p class="text-[20px] text-[#FF9B23] self-end">
+      99 kr
+     </p>
+    </div>
+   </div>
+   <div class="w-[240px] h-[300px] bg-white shadow-md rounded-b-[20px] flex flex-col animate__animated animate__fadeInUp">
+    <div class="w-full h-[170px] bg-cover bg-center" style="background-image: url('https://res.cloudinary.com/anora/image/upload/t_OgImage-MD-MD,f_auto/folkofolk%2Fgourmetpizza');">
+    </div>
+    <div class="flex flex-col justify-between h-[130px] p-2 pb-4">
+     <p class="text-[20px] text-[#FF9B23]">
+      Mamma-mia
+     </p>
+     <p class="text-[18px] text-[#FF9B23] pl-2 flex-wrap pr-2 flex">
+      Skinka,champinjoner,
+      <br/>
+      ananas
+     </p>
+     <p class="text-[20px] text-[#FF9B23] self-end">
+      99 kr
+     </p>
+    </div>
+   </div>
+   <div class="w-[240px] h-[300px] bg-white shadow-md rounded-b-[20px] flex flex-col animate__animated animate__fadeInUp">
+    <div class="w-full h-[170px] bg-cover bg-center" style="background-image: url('https://res.cloudinary.com/anora/image/upload/t_OgImage-MD-MD,f_auto/folkofolk%2Fgourmetpizza');">
+    </div>
+    <div class="flex flex-col justify-between h-[130px] p-2 pb-4">
+     <p class="text-[20px] text-[#FF9B23]">
+      Hawaii
+     </p>
+     <p class="text-[18px] text-[#FF9B23] pl-2 flex-wrap pr-2 flex">
+      Skinka,ananas
+     </p>
+     <p class="text-[20px] text-[#FF9B23] self-end">
+      99 kr
+     </p>
+    </div>
+   </div>
+   <div class="w-[240px] h-[300px] bg-white shadow-md rounded-b-[20px] flex flex-col animate__animated animate__fadeInUp">
+    <div class="w-full h-[170px] bg-cover bg-center" style="background-image: url('https://res.cloudinary.com/anora/image/upload/t_OgImage-MD-MD,f_auto/folkofolk%2Fgourmetpizza');">
+    </div>
+    <div class="flex flex-col justify-between h-[130px] p-2 pb-4">
+     <p class="text-[20px] text-[#FF9B23]">
+      Calzone(Inbakad)
+     </p>
+     <p class="text-[18px] text-[#FF9B23] pl-2 flex-wrap pr-2 flex">
+      Skinka
+     </p>
+     <p class="text-[20px] text-[#FF9B23] self-end">
+      99 kr
+     </p>
+    </div>
+   </div>
+   <div class="w-[240px] h-[300px] bg-white shadow-md rounded-b-[20px] flex flex-col animate__animated animate__fadeInUp">
+    <div class="w-full h-[170px] bg-cover bg-center" style="background-image: url('https://res.cloudinary.com/anora/image/upload/t_OgImage-MD-MD,f_auto/folkofolk%2Fgourmetpizza');">
+    </div>
+    <div class="flex flex-col justify-between h-[130px] p-2 pb-4">
+     <p class="text-[20px] text-[#FF9B23]">
+      Pescatore
+     </p>
+     <p class="text-[18px] text-[#FF9B23] pl-2 flex-wrap pr-2 flex">
+      Skinka,tonfisk
+     </p>
+     <p class="text-[20px] text-[#FF9B23] self-end">
+      99 kr
+     </p>
+    </div>
+   </div>
+   <div class="w-[240px] h-[300px] bg-white shadow-md rounded-b-[20px] flex flex-col animate__animated animate__fadeInUp">
+    <div class="w-full h-[170px] bg-cover bg-center" style="background-image: url('https://res.cloudinary.com/anora/image/upload/t_OgImage-MD-MD,f_auto/folkofolk%2Fgourmetpizza');">
+    </div>
+    <div class="flex flex-col justify-between h-[130px] p-2 pb-4">
+     <p class="text-[20px] text-[#FF9B23]">
+      Al-Tonno
+     </p>
+     <p class="text-[18px] text-[#FF9B23] pl-2 flex-wrap pr-2 flex">
+      Tonfisk,lök
+     </p>
+     <p class="text-[20px] text-[#FF9B23] self-end">
+      99 kr
+     </p>
+    </div>
+   </div>
+   <div class="w-[240px] h-[300px] bg-white shadow-md rounded-b-[20px] flex flex-col animate__animated animate__fadeInUp">
+    <div class="w-full h-[170px] bg-cover bg-center" style="background-image: url('https://res.cloudinary.com/anora/image/upload/t_OgImage-MD-MD,f_auto/folkofolk%2Fgourmetpizza');">
+    </div>
+    <div class="flex flex-col justify-between h-[130px] p-2 pb-4">
+     <p class="text-[20px] text-[#FF9B23]">
+      Paradiso
+     </p>
+     <p class="text-[18px] text-[#FF9B23] pl-2 flex-wrap pr-2 flex">
+      Champinjoner,räkor
+     </p>
+     <p class="text-[20px] text-[#FF9B23] self-end">
+      99 kr
+     </p>
+    </div>
+   </div>
+   <div class="w-[240px] h-[300px] bg-white shadow-md rounded-b-[20px] flex flex-col animate__animated animate__fadeInUp">
+    <div class="w-full h-[170px] bg-cover bg-center" style="background-image: url('https://res.cloudinary.com/anora/image/upload/t_OgImage-MD-MD,f_auto/folkofolk%2Fgourmetpizza');">
+    </div>
+    <div class="flex flex-col justify-between h-[130px] p-2 pb-4">
+     <p class="text-[20px] text-[#FF9B23]">
+      Rico
+     </p>
+     <p class="text-[18px] text-[#FF9B23] pl-2 flex-wrap pr-2 flex">
+      Salami,lök,ägg
+     </p>
+     <p class="text-[20px] text-[#FF9B23] self-end">
+      99 kr
+     </p>
+    </div>
+   </div>
+   <div class="w-[240px] h-[300px] bg-white shadow-md rounded-b-[20px] flex flex-col animate__animated animate__fadeInUp">
+    <div class="w-full h-[170px] bg-cover bg-center" style="background-image: url('https://res.cloudinary.com/anora/image/upload/t_OgImage-MD-MD,f_auto/folkofolk%2Fgourmetpizza');">
+    </div>
+    <div class="flex flex-col justify-between h-[130px] p-2 pb-4">
+     <p class="text-[20px] text-[#FF9B23]">
+      SanRemo
+     </p>
+     <p class="text-[18px] text-[#FF9B23] pl-2 flex-wrap pr-2 flex">
+      Räkor
+     </p>
+     <p class="text-[20px] text-[#FF9B23] self-end">
+      99 kr
+     </p>
+    </div>
+   </div>
+  </div>
+  <p class="text-4xl mx-2 md:ml-24 text-[#FF9B23] sm:my-8 md:text-left text-center animate__animated animate__fadeInUp">
+   ORDINARIA PIZZOR
+  </p>
+  <div class="flex flex-row flex-wrap gap-12 items-center justify-center">
+   <div class="w-[240px] h-[300px] bg-white shadow-md rounded-b-[20px] flex flex-col animate__animated animate__fadeInUp">
+    <div class="w-full h-[170px] bg-cover bg-center" style="background-image: url('https://res.cloudinary.com/anora/image/upload/t_OgImage-MD-MD,f_auto/folkofolk%2Fgourmetpizza');">
+    </div>
+    <div class="flex flex-col justify-between h-[130px] p-2 pb-4">
+     <p class="text-[20px] text-[#FF9B23]">
+      Ciao-Ciao
+     </p>
+     <p class="text-[18px] text-[#FF9B23] pl-2 flex-wrap pr-2 flex">
+      Oxfile,Champinjone,
+      <br/>
+      Lök,Vitlök
+     </p>
+     <p class="text-[20px] text-[#FF9B23] self-end">
+      110 kr
+     </p>
+    </div>
+   </div>
+   <div class="w-[240px] h-[300px] bg-white shadow-md rounded-b-[20px] flex flex-col animate__animated animate__fadeInUp">
+    <div class="w-full h-[170px] bg-cover bg-center" style="background-image: url('https://res.cloudinary.com/anora/image/upload/t_OgImage-MD-MD,f_auto/folkofolk%2Fgourmetpizza');">
+    </div>
+    <div class="flex flex-col justify-between h-[130px] p-2 pb-4">
+     <p class="text-[20px] text-[#FF9B23]">
+      Husets
+     </p>
+     <p class="text-[18px] text-[#FF9B23] pl-2 flex-wrap pr-2 flex">
+      Oxfile,Champinjoner,
+      <br/>
+      Bearnaisesås
+     </p>
+     <p class="text-[20px] text-[#FF9B23] self-end">
+      110 kr
+     </p>
+    </div>
+   </div>
+   <div class="w-[240px] h-[300px] bg-white shadow-md rounded-b-[20px] flex flex-col animate__animated animate__fadeInUp">
+    <div class="w-full h-[170px] bg-cover bg-center" style="background-image: url('https://res.cloudinary.com/anora/image/upload/t_OgImage-MD-MD,f_auto/folkofolk%2Fgourmetpizza');">
+    </div>
+    <div class="flex flex-col justify-between h-[130px] p-2 pb-4">
+     <p class="text-[20px] text-[#FF9B23]">
+      Sörping
+     </p>
+     <p class="text-[18px] text-[#FF9B23] pl-2 flex-wrap pr-2 flex">
+      Fläskfile,Champinjoner,
+      <br/>
+      Skinka,Lök,Bearnaisesås
+     </p>
+     <p class="text-[20px] text-[#FF9B23] self-end">
+      110 kr
+     </p>
+    </div>
+   </div>
+   <div class="w-[240px] h-[300px] bg-white shadow-md rounded-b-[20px] flex flex-col animate__animated animate__fadeInUp">
+    <div class="w-full h-[170px] bg-cover bg-center" style="background-image: url('https://res.cloudinary.com/anora/image/upload/t_OgImage-MD-MD,f_auto/folkofolk%2Fgourmetpizza');">
+    </div>
+    <div class="flex flex-col justify-between h-[130px] p-2 pb-4">
+     <p class="text-[20px] text-[#FF9B23]">
+      Black&amp;White
+     </p>
+     <p class="text-[18px] text-[#FF9B23] pl-2 flex-wrap pr-2 flex">
+      Oxfile,Fläskfile,
+      <br/>
+      Bearnaisesås
+     </p>
+     <p class="text-[20px] text-[#FF9B23] self-end">
+      110 kr
+     </p>
+    </div>
+   </div>
+   <div class="w-[240px] h-[300px] bg-white shadow-md rounded-b-[20px] flex flex-col animate__animated animate__fadeInUp">
+    <div class="w-full h-[170px] bg-cover bg-center" style="background-image: url('https://res.cloudinary.com/anora/image/upload/t_OgImage-MD-MD,f_auto/folkofolk%2Fgourmetpizza');">
+    </div>
+    <div class="flex flex-col justify-between h-[130px] p-2 pb-4">
+     <p class="text-[20px] text-[#FF9B23]">
+      Semir
+     </p>
+     <p class="text-[18px] text-[#FF9B23] pl-2 flex-wrap pr-2 flex">
+      Fläskfile,Räkor,
+      <br/>
+      Bearnaisesås
+     </p>
+     <p class="text-[20px] text-[#FF9B23] self-end">
+      110 kr
+     </p>
+    </div>
+   </div>
+   <div class="w-[240px] h-[300px] bg-white shadow-md rounded-b-[20px] flex flex-col animate__animated animate__fadeInUp">
+    <div class="w-full h-[170px] bg-cover bg-center" style="background-image: url('https://res.cloudinary.com/anora/image/upload/t_OgImage-MD-MD,f_auto/folkofolk%2Fgourmetpizza');">
+    </div>
+    <div class="flex flex-col justify-between h-[130px] p-2 pb-4">
+     <p class="text-[20px] text-[#FF9B23]">
+      Tropicana
+     </p>
+     <p class="text-[18px] text-[#FF9B23] pl-2 flex-wrap pr-2 flex">
+      Fläskfile,Champinjoner,
+      <br/>
+      Banan,Curry
+     </p>
+     <p class="text-[20px] text-[#FF9B23] self-end">
+      110 kr
+     </p>
+    </div>
+   </div>
+  </div>
+  <div class="w-full py-4 bg-[#FF9B23] mt-14 flex flex-col px-4 text-white">
+   <img class="w-[200px] self-center" src="GFX/LogoLight.svg"/>
+   <div class="flex flex-row sm:justify-evenly justify-center items-center py-8 flex-wrap sm:text-left text-center">
+    <div>
+     <p class="text-xl ml-12">
+      Prästgatan 3 Söderköping
+     </p>
+     <p class="text-xl ml-12">
+      Ring oss : 0121-13140
+     </p>
+    </div>
+    <div>
+     <p class="text-xl ml-12">
+      Öppettider
+     </p>
+     <p class="text-xl ml-12">
+      Mån-fre 11-21
+     </p>
+     <p class="text-xl ml-12">
+      Lör-sön 12-21
+     </p>
+    </div>
+   </div>
+  </div>
+ </body>
+</html>

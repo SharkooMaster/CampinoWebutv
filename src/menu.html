@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+		<script src="https://cdn.tailwindcss.com"></script>
+		<script src="./index.js"></script>
+	</head>
+	<body>
+		<? Navbar ?>
+		<? NavbarMobile ?>
+
+		<p class="animate__animated animate__fadeInUp text-4xl mx-2 md:ml-24 text-[{c1}] sm:mt-8 md:text-left text-center">ORDINARIA PIZZOR</p>
+		<p class="animate__animated animate__fadeInUp text-2xl mx-2 mb-4 md:ml-32 text-[{c1}] sm:mb-8 md:text-left text-center">I alla pizzor ingår Tomatsås & Ost & Pizzasallad</p>
+		<div class="flex flex-row flex-wrap gap-12 items-center justify-center">
+			<? ProdCard name=Margarita desc=Tomatsås,ost price=99 ?>
+			<? ProdCard name=Funghi desc=Champinjoner price=99 ?>
+			<? ProdCard name=Vesuvio desc=Skinka price=99 ?>
+			<? ProdCard name=Bussola desc=Skinka,räkor price=99 ?>
+			<? ProdCard name=CAPRICCIOSA desc=Skinka,champinjoner price=99 ?>
+			<? ProdCard name=Nobel desc=Skinka,champinjoner,räkor price=99 ?>
+			<? ProdCard name=Mamma-mia desc=Skinka,champinjoner,<br/>ananas price=99 ?>
+			<? ProdCard name=Hawaii desc=Skinka,ananas price=99 ?>
+			<? ProdCard name=Calzone(Inbakad) desc=Skinka price=99 ?>
+			<? ProdCard name=Pescatore desc=Skinka,tonfisk price=99 ?>
+			<? ProdCard name=Al-Tonno desc=Tonfisk,lök price=99 ?>
+			<? ProdCard name=Paradiso desc=Champinjoner,räkor price=99 ?>
+			<? ProdCard name=Rico desc=Salami,lök,ägg price=99 ?>
+			<? ProdCard name=SanRemo desc=Räkor price=99 ?>
+		</div>
+
+		<p class="text-4xl mx-2 md:ml-24 text-[{c1}] sm:my-8 md:text-left text-center animate__animated animate__fadeInUp">ORDINARIA PIZZOR</p>
+		<div class="flex flex-row flex-wrap gap-12 items-center justify-center">
+			<? ProdCard name=Ciao-Ciao desc=Oxfile,Champinjone,<br/>Lök,Vitlök price=110 ?>
+			<? ProdCard name=Husets desc=Oxfile,Champinjoner,<br/>Bearnaisesås price=110 ?>
+			<? ProdCard name=Sörping desc=Fläskfile,Champinjoner,<br/>Skinka,Lök,Bearnaisesås price=110 ?>
+			<? ProdCard name=Black&White desc=Oxfile,Fläskfile,<br/>Bearnaisesås price=110 ?>
+			<? ProdCard name=Semir desc=Fläskfile,Räkor,<br/>Bearnaisesås price=110 ?>
+			<? ProdCard name=Tropicana desc=Fläskfile,Champinjoner,<br/>Banan,Curry price=110 ?>
+		</div>
+
+		<? Footer ?>
+	</body>
+</html>
